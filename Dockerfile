@@ -9,4 +9,4 @@ rabbitmq_stomp rabbitmq_web_stomp \
 rabbitmq_federation rabbitmq_federation_management \
 rabbitmq_shovel rabbitmq_shovel_management 
 
-RUN apk add curl
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
