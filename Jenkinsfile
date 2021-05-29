@@ -15,8 +15,6 @@ pipeline {
 
             steps {
                 
-                echo sh(script: 'env|sort', returnStdout: true)
-
                 sh  '''
                     docker build . --build-arg BASE_TAG=${BRANCH_NAME:-management} -t registry.oragon.io/services/rabbitmq:${BRANCH_NAME:-management}
                 '''
