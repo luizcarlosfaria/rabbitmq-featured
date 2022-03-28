@@ -44,6 +44,7 @@ pipeline {
 
  
     }
+    /*
     post {
 
         always {
@@ -55,4 +56,5 @@ pipeline {
             }
         }
     }
+    */
 }
