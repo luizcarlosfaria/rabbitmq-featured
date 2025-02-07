@@ -1,0 +1,34 @@
+services:
+
+  rabbitmq-featured-ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BASE_TAG=4.0-management
+    image: rabbitmq-featured-ubuntu    
+    container_name: rabbitmq-featured-ubuntu
+    ports:
+      - "5674:5672"
+      - "15674:15672"
+      - "15694:15692"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+
+  rabbitmq-featured-alpine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BASE_TAG=4.0-management-alpine
+    image: rabbitmq-featured-alpine
+    container_name: rabbitmq-featured-alpine
+    ports:
+      - "5675:5672"
+      - "15675:15672"
+      - "15695:15692"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"      
