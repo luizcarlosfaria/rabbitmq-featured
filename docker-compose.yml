@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - BASE_TAG=4.0-management
+        - BASE_TAG=4.1.1-management
     image: rabbitmq-featured-ubuntu    
     container_name: rabbitmq-featured-ubuntu
     ports:
@@ -22,7 +22,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - BASE_TAG=4.0-management-alpine
+        - BASE_TAG=4.1.1-management-alpine
     image: rabbitmq-featured-alpine
     container_name: rabbitmq-featured-alpine
     ports:
