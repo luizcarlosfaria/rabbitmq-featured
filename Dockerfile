@@ -10,7 +10,7 @@ RUN if [ "${BASE_TAG#*alpine}" != "$BASE_TAG" ]; then \
 
 ADD ./rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 
-ENV RABBITMQ_FEATURE_FLAGS="khepri_db,detailed_queues_endpoint,rabbit_exchange_type_local_random,rabbitmq_4.0.0,message_containers_deaths_v2,quorum_queue_non_voters,stream_filtering,feature_flags_v2"
+#ENV RABBITMQ_FEATURE_FLAGS="rabbitmq_4.0.0,rabbitmq_4.1.0"
 
 RUN rabbitmq-plugins enable --offline \
 rabbitmq_mqtt rabbitmq_web_mqtt \
