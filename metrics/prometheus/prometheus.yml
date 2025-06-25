@@ -45,6 +45,13 @@ scrape_configs:
     static_configs:
       - targets:
           - 'rabbitmq-featured-ubuntu:15692'
+  - job_name: 'rabbitmq-server-per-object'
+    metrics_path: "/metrics/per-object"
+    params:
+      family: ["per_object"]
+    static_configs:
+      - targets:
+          - 'rabbitmq-featured-ubuntu:15692'          
   - job_name: 'rabbitmq-perf-test'
     static_configs:
       - targets:

@@ -16,7 +16,7 @@ pipeline {
             steps {
                 
                 sh  '''
-                    docker build . --build-arg BASE_TAG=${BRANCH_NAME:-xpto} -t registry.oragon.io/services/rabbitmq:${BRANCH_NAME:-xpto}
+                    docker build ./src --build-arg BASE_TAG=${BRANCH_NAME:-xpto} -t registry.oragon.io/services/rabbitmq:${BRANCH_NAME:-xpto}
                 '''
 
             }

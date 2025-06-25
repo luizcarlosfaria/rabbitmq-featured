@@ -2,7 +2,7 @@ services:
   ################################### UBUNTU
   rabbitmq-featured-ubuntu:
     build:
-      context: .
+      context: ./src
       dockerfile: Dockerfile
       args:
         - "BASE_TAG=${BASE_TAG_UBUNTU}"

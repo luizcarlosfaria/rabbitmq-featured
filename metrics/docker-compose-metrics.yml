@@ -59,7 +59,7 @@ services:
       - /sys:/host/sys:ro
       - /:/rootfs:ro
   cadvisor:
-    expose:
+    ports:
       - 8080
     # https://hub.docker.com/r/google/cadvisor/tags
     image: gcr.io/cadvisor/cadvisor
